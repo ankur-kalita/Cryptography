@@ -1,3 +1,5 @@
+package making;
+
 public class CaesarCipher {
     public String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -10,8 +12,6 @@ public class CaesarCipher {
             if (charIndex != -1) {
                 int encryptedIndex = Math.floorMod(charIndex + key, ALPHABET.length());
                 cipherText += ALPHABET.charAt(encryptedIndex);
-            } else {
-                cipherText += ch; 
             }
         }
         return cipherText;
